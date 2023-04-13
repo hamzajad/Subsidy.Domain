@@ -15,10 +15,7 @@ namespace Subsidy.Domain.Mapping
         public MappingProfile()
         {
             ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
-            //CreateMap<IdentityUser<string>, UserInforamtionViewModel>().ReverseMap();
-            //CreateMap<IdentityRole<string>, RoleDto>().ReverseMap();
-            //CreateMap<IdentityUser<string>, DeleteUsersCommands>().ReverseMap();
-            //CreateMap<Employee, EmployeeInforamtionViewModel>().ReverseMap();
+     
         }
 
         private void ApplyMappingsFromAssembly(Assembly assembly)
