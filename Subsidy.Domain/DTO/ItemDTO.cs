@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Subsidy.Domain.DTO
 {
-    public class ItemDTO:IMappingForm<Item>,IMappingForm<FeedType>
+    public class ItemDTO:IMappingForm<Item>
     {
         public string FeedTypeName { get; set; }
         public string? ResourceName { get; set; }

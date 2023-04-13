@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Subsidy.Domain.Model;
+using AutoMapper;
+using Subsidy.Domain.DTO;
+using Subsidy.Domain.Mapping;
 
 namespace Subsidy.infrastructure.Services
 {
@@ -23,9 +26,11 @@ namespace Subsidy.infrastructure.Services
             new FeedType{Id = 5 , NameFeedType = "خلطات مركزة", Fk_resourceId = 1},
 
         };
-        public Task<List<FeedType>> GetFeedType()
+        public Task<List<FeedTypeDto>> GetFeedType()
         {
-            return Task.FromResult(feedTypes.ToList());
+            var mapper = new MapperConfiguration(cfg => cfg.AddProfile<MappingProfile>()).CreateMapper();
+            var itemDTOs = mapper.Map<List<FeedTypeDto>>(feedTypes);
+            return Task.FromResult(itemDTOs);
         }
 
     }
