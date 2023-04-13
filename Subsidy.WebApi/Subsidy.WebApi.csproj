@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Subsidy.Application\Subsidy.Application.csproj" />
+    <ProjectReference Include="..\Subsidy.Domain\Subsidy.Domain.csproj" />
+    <ProjectReference Include="..\Subsidy.infrastructure\Subsidy.infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
